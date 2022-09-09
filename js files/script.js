@@ -7,7 +7,7 @@ console.log('hi')
 function displayAbout(){
     return(
         info.forEach(child => {
-        if(child.style.display === "none"){
+        if(child.style.display == "none"){
             child.style.display = "block"
             document.getElementById('page-content').style.left = '13.38vw' 
         } else {

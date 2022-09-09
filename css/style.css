@@ -25,14 +25,15 @@ nav ul{
 
 nav{
 
-    background-color: gray;
-  
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,65,1) 0%, rgba(0,212,255,1) 100%);
+    border-radius: 10px;
 }
 
 nav li{
     list-style: none;
     margin: 1rem;
-   
+    text-shadow: 1px 1px 2px rgb(11, 72, 13), 0 0 1em blue, 0 0 0.2em blue;
+    font-size: 1.3em;
 }
 
 a{
@@ -47,6 +48,7 @@ h1{
     text-align: center;
     background-color: black;
     display: block;
+    text-shadow: 1px 1px 2px rgb(11, 72, 13), 0 0 1em blue, 0 0 0.2em blue;
 }
 
 #page-content{
@@ -60,7 +62,8 @@ h1{
 
 }
 #content{
-    display: inline-block
+    display: inline-block;
+    
 }
 
 .flex-child{
@@ -71,6 +74,7 @@ h1{
     background-color: black;
     line-break: normal;
     width: 25rem;
+    
 
 }
 img{

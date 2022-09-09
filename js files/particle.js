@@ -59,7 +59,7 @@ class Particle{
     constructor(){
         this.x = mouse.x;
         this.y = mouse.y;
-        //  this.color = `hsl(${hue},100%,50%)`
+        //  this.color = `hsl(${hue},100%,50%)`   
         this.color = colors[Math.floor(Math.random()*7)];
          this.x = Math.random() * canvas.width;
          this.y = Math.random() * canvas.height;

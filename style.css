@@ -1,0 +1,85 @@
+*{
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    overflow: hidden;
+    background: black;
+}
+canvas{
+    /* background:blue; */
+    position: absolute;
+    top: 0;
+    left:0;
+    z-index: -1;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+
+    background-color: gray;
+  
+}
+
+nav li{
+    list-style: none;
+    margin: 1rem;
+   
+}
+
+a{
+    text-decoration: none;
+}
+
+a :hover{
+    color:greenyellow;
+}
+
+h1{
+    text-align: center;
+    background-color: black;
+    display: block;
+}
+
+#page-content{
+ background-color:black;
+ display:inline-flex;
+ position: relative;
+ margin: auto;
+ left: 40vw;
+ top: 7vh;
+ padding: 1rem;
+
+}
+#content{
+    display: inline-block
+}
+
+.flex-child{
+    display: none;
+    flex: 1;
+    margin: 1rem;
+    padding: 2rem;
+    background-color: black;
+    line-break: normal;
+    width: 25rem;
+
+}
+img{
+    width: 325px;
+    height: 550px;
+}
+#me:hover{
+    color:greenyellow ;
+    cursor: pointer;
+}
+
+ 

@@ -41,6 +41,14 @@ class Effect{
          this.symbols[i] = new Symbol(i, 0, this.fontSize, this.canvasHeight);
       }
     }
+
+    resize(width,height){
+        this.canvasWidth = width;
+        this.canvasHeight = height; 
+        this.columns = this.canvasWidth/this.fontSize;
+        this.symbols =[];
+        this.#initialize();
+    }
 }
 
 const effect = new Effect(canvas.width, canvas.height);
@@ -68,3 +76,10 @@ function animate(timeStamp){
 } 
 //starts animation
 animate(0);
+
+
+window.addEventListener('resize', ()=>{
+    this.canvasWidth = canvasWidth;
+    this.canvasHeight = canvasHeight;
+    effect.resize(canvas.width, canvas.height);
+})

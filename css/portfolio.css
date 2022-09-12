@@ -1,0 +1,32 @@
+body{
+    background-color: black;
+}
+*{
+    color: white;
+}
+
+.container{
+
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: large;
+    border-radius: 400px;
+    position: relative;
+    top: 5vw;
+    
+    
+}
+
+.child{
+    width: 30vw;
+    height:54vh;
+    
+}
+
+.child img{
+    width:15vw;
+    height:22vh;
+}

@@ -1,4 +1,4 @@
-const canvas = document.querySelector('#canvas1')
+const canvas = document.querySelector('#canvas2')
 const ctx = canvas.getContext('2d');
 // console.log(ctx);
 const particlesArr = []
@@ -17,7 +17,7 @@ const mouse ={
     y: undefined,
 }
 canvas.addEventListener('click',(e)=>{
-    mouse.x = e.x;
+    mouse.x = e.x; 
     mouse.y = e.y;
     for (let i = 0; i<100; i++){
         particlesArr.push(new Particle())
@@ -34,6 +34,18 @@ canvas.addEventListener('mousemove',(e)=>{
     }
     
 })
+
+// document.addEventListener("DOMContentLoaded",()=>{
+//     for(let i = 0; i<500; i++){
+//         particlesArr.push(new Particle())
+//     }
+// })
+
+// setInterval(()=>{
+//     for(let i = 0; i<60; i++){
+//         particlesArr.push(new Particle())
+//     }
+// },1000)
 
 // function drawCircle(){
     // ctx.fillStyle = 'green'
@@ -57,8 +69,6 @@ animate();
 
 class Particle{
     constructor(){
-        this.x = mouse.x;
-        this.y = mouse.y;
         //  this.color = `hsl(${hue},100%,50%)`   
         this.color = colors[Math.floor(Math.random()*7)];
          this.x = Math.random() * canvas.width;
@@ -71,7 +81,7 @@ class Particle{
         this.x += this.speedX;
         this.y += this.speedY;
         if(this.size > 0.2){
-            this.size -=0.1;
+            this.size -=0.07;
         }
     }
     //creats circle 
@@ -82,6 +92,11 @@ class Particle{
         ctx.arc(this.x,this.y,this.size,0  ,Math.PI * 2);
         ctx.fill();
         // ctx.stroke();
+     }
+     
+     followMouse(){
+        this.x = mouse.x;
+        this.y = mouse.y;
      }
 }
 
@@ -129,4 +144,3 @@ function handleParticles(){
 //      particlesArr.push(new Particle)
 //     }
 // }
-
